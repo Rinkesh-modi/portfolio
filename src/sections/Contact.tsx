@@ -1,8 +1,9 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import grainImage from "@/assets/images/grain.jpg";
 export const ContactSection = () => {
+  const connectLink = "https://calendly.com/rinkeshmodi001/30min";
   return (
-    <div className="py-16 pt-12 lg:py-24 lg:pt-20">
+    <div className="py-16 pt-12 lg:py-24 lg:pt-20" id="contact">
       <div className="container">
         <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left relative overflow-hidden z-0">
           <div
@@ -20,11 +21,12 @@ export const ContactSection = () => {
               </p>
             </div>
             <div className="">
-
-            <button className="text-white bg-gray-900 gap-2 inline-flex items-center px-6 h-12 rounded-xl border border-gray-900">
-              <span className="font-semibold w-max">Contact Me</span>
-              <ArrowUpRightIcon className="size-4" />
-            </button>
+              <a href={connectLink} target="_blank" rel="noreferrer">
+                <button className="text-white bg-gray-900 gap-2 inline-flex items-center px-6 h-12 rounded-xl border border-gray-900">
+                  <span className="font-semibold w-max">Contact Me</span>
+                  <ArrowUpRightIcon className="size-4" />
+                </button>
+              </a>
             </div>
           </div>
         </div>

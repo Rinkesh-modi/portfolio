@@ -1,3 +1,4 @@
+"use client";
 import memejiImage from "@/assets/images/memoji-computer.png";
 import Image from "next/image";
 import ArrowDown from "@/assets/icons/arrow-down.svg";
@@ -7,6 +8,15 @@ import { HeroOrbit } from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 
 export const HeroSection = () => {
+  // const openCalendly = () => {
+  //   console.log("Opening Calendly");
+  //   window.open(
+  //     "https://calendly.com/rinkeshmodi001/30min",
+  //     "_blank",
+  //     "noopener noreferrer"
+  //   );
+  // };
+  const connectLink = "https://calendly.com/rinkeshmodi001/30min";
   return (
     <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
@@ -98,7 +108,7 @@ export const HeroSection = () => {
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
-      <div className="container">
+      <div className="container relative z-100">
         <div className="flex flex-col items-center">
           <Image
             src={memejiImage}
@@ -116,28 +126,26 @@ export const HeroSection = () => {
         </div>
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
+            Crafting Seamless & Scalable Web Interfaces
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg text-pretty">
-            With over a year of experience transforming designs into functional,
-            high-performing web applications, including work at AAAA Auto
-            Insurance, I&apos;m ready to bring your next project to life!
+            I’m a Frontend Engineer with 2.5 years of experience crafting clean,
+            responsive, and logic-driven UIs using React, Redux and Tailwind
+            CSS. Now expanding into backend development to deliver full-stack
+            solutions that are as robust as they are beautiful.
           </p>
-          {/* <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in transforming designs into functional,
-            high-performing web applications. Let&apos;s discuss your next
-            project.
-          </p> */}
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
-            <span>👋</span>
-            <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          <a href={connectLink} target="_blank" rel="noreferrer">
+            <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+              <span>👋</span>
+              <span className="font-semibold">Let&apos;s Connect</span>
+            </button>
+          </a>
         </div>
       </div>
     </div>

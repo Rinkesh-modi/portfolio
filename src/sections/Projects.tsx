@@ -1,6 +1,9 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+// import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+// import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+// import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import uvr from "@/assets/images/uvr.jpg";
+import hirehub from "@/assets/images/hirehub.jpg";
+import gemini from "@/assets/images/gemini.jpg";
 import Image from "next/image";
 import CheckCircleICon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -10,46 +13,66 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "HireHub",
+    year: "2025",
+    title: "Recruitment platform for job seekers and employers",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Scalable UI with React, Redux Toolkit, and Tailwind for job management.",
+      },
+      { title: "Built REST APIs with Node.js; added file uploads via Multer." },
+      {
+        title:
+          "Implemented admin tools for job posting, filtering, and tracking.",
+      },
     ],
-    link: "",
-    image: darkSaasLandingPage,
+
+    link: "https://hire-hub-strd.onrender.com/",
+    image: hirehub,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "UVR Film Agency",
+    year: "2025",
+    title: "Platform for creators offering YouTube and music services",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      {
+        title:
+          "Increased engagement with animated cards and interactive sections.",
+      },
+      {
+        title: "Enhanced accessibility via mobile-first, cross-browser design.",
+      },
+      { title: "Streamlined booking with intuitive, frictionless flow." },
     ],
-    link: "",
-    image: lightSaasLandingPage,
+
+    link: "https://6699169325623dc6d8e46421--gleaming-belekoy-d4552b.netlify.app/",
+    image: uvr,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
+    company: "Gemini AI Clone",
+    year: "2025",
+    title: "A conversational AI interface inspired by Google's Gemini",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Formatted Gemini API responses for clear, real-time conversations.",
+      },
+      {
+        title: "Delivered fast, responsive UI for consistent user experience.",
+      },
+      {
+        title: "Ensured mobile-friendly interactions across all device sizes.",
+      },
     ],
-    link: "",
-    image: aiStartupLandingPage,
+    link: "https://geminitalks.netlify.app/",
+    image: gemini,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section className="pb-16 lg:py-24" id="project">
       <div className="container">
         <SectionHeader
           title=" Featured Projects"
@@ -85,7 +108,7 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank" rel="noreferrer">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-7 rounded-xl font-semibold inline-flex items-center justify-center mt-8">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
@@ -94,7 +117,7 @@ export const ProjectsSection = () => {
                 </div>
                 <div className="relative">
                   <Image
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-tl-xl"
                     src={project.image}
                     alt={project.title}
                   />

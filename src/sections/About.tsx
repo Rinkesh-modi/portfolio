@@ -18,14 +18,14 @@ import { useRef } from "react";
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Cooking",
+    emoji: "👨‍🍳",
     left: "5%",
     top: "5%",
   },
   {
-    title: "Photography",
-    emoji: "📸",
+    title: "Biking",
+    emoji: "🚴‍♂️",
     left: "50%",
     top: "5%",
   },
@@ -48,7 +48,7 @@ const hobbies = [
     top: "45%",
   },
   {
-    title: "Fitness",
+    title: "Gyming",
     emoji: "🏋️‍♂️",
     left: "5%",
     top: "65%",
@@ -91,7 +91,7 @@ const toolboxItems = [
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    <div className="py-20 lg:py-28" id="about">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"
