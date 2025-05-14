@@ -136,10 +136,16 @@ export const HeroSection = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
+          <a
+            href="https://drive.google.com/file/d/1gk2qK11pFDVPt9s3i0yjNAjqBDG2KwzP/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+              <span className="font-semibold">Explore My Resume</span>
+              <ArrowDown className="size-4" />
+            </button>
+          </a>
           <a href={connectLink} target="_blank" rel="noreferrer">
             <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
               <span>👋</span>
